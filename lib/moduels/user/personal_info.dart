@@ -108,7 +108,8 @@ class _PersonalInfoState extends State<PersonalInfo> {
                       controller: _infoController.blood,
                       label: ''),
 
-                  SizedBox(height: 5.h,),
+                  SizedBox(height:
+                  5.h,),
 
                   InkWell(
                     onTap: (){

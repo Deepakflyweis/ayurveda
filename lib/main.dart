@@ -1,4 +1,8 @@
 import 'package:ayurveda/moduels/digonistics/digonistics_screen.dart';
+import 'package:ayurveda/moduels/home_module/home_screen.dart';
+import 'package:ayurveda/moduels/home_module/profile_menu.dart';
+import 'package:ayurveda/moduels/location_module/location_screen.dart';
+import 'package:ayurveda/moduels/medicine/medicine_home.dart';
 import 'package:ayurveda/moduels/splash/splash_screen1.dart';
 import 'package:ayurveda/moduels/user/otp_screen.dart';
 import 'package:ayurveda/moduels/user/personal_info.dart';
@@ -22,7 +26,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: DigonisticsScreen(),
+        home: MedicineHome(),
       );
     }
     ));

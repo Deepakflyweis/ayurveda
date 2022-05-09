@@ -17,3 +17,15 @@ TextStyle hintTxtStyle = const TextStyle(
   color: hinttxtclr,
   fontWeight: FontWeight.w500,
 );
+
+TextStyle TxtStyleAW = const TextStyle(
+  fontSize: 18,
+  color: whiteclr,
+  fontWeight: FontWeight.bold,
+);
+
+TextStyle TxtStyleG = const TextStyle(
+  fontSize: 18,
+  color: btngreen,
+  fontWeight: FontWeight.bold,
+);
