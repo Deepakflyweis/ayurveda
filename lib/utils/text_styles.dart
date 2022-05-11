@@ -7,6 +7,11 @@ TextStyle TxtStyleN = const TextStyle(
   color: blckclr,
   fontWeight: FontWeight.w600,
 );
+TextStyle TxtStyleB = const TextStyle(
+  fontSize: 18,
+  color: blckclr,
+  fontWeight: FontWeight.w600,
+);
 TextStyle TxtStyleL = const TextStyle(
   fontSize: 12,
   color: lighttxtclr,

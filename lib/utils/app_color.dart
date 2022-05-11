@@ -11,3 +11,5 @@ const redtxtclr = Color(0xFFF90606);
 const boxclr = Color(0xFFE75656);
 const cardclr = Color(0xFFBCBCBC);
 const blueclr = Color(0xFF1C6EBA);
+const boxgreenclr = Color(0xFF008000);
+const divclr = Color(0xFFECECEC);

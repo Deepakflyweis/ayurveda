@@ -166,17 +166,77 @@ class _MedicineHomeState extends State<MedicineHome> {
                     }),
               ),
 
-              SizedBox(height: 3.h,),
+              SizedBox(height: 2.h,),
               Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: const EdgeInsets.only(left: 15.0),
-                    child: Text('For You',style: TxtStyleN,),
+                    child: Text('For You',style: TxtStyleB,),
                   )),
 
-              SizedBox(height: 3.h,),
+              SizedBox(height: 1.h,),
 
               ///For you
+              Container(
+                padding: EdgeInsets.all(12.0),
+                child: GridView.builder(
+                    gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 6.0,
+                        mainAxisSpacing: 6.0
+                    ),
+                    itemCount: images.length,
+                    shrinkWrap: true,
+                    itemBuilder: (BuildContext context, int index){
+                      return InkWell(
+                        onTap: (){
+
+                        },
+                        child: Container(
+                          width: 40.w,
+                          height: 40.h,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                width: 100.w,
+                                height: 15.h,
+                                child: Image.asset('assets/images/tabs.png',fit: BoxFit.fill),
+                              ),
+                              Align(
+                                   alignment: Alignment.centerLeft,
+                                   child: Text('Medicine Name',style: TxtStyleN,)),
+                              Row(
+                                children: const [
+                                  Text(' lorem ipsuem dolor',style: TextStyle(fontSize: 10),overflow: TextOverflow.fade),
+                                  Text('4.5'),
+                                  Icon(Icons.star_rate,color: Colors.amber,),
+                                ],
+                              ),
+
+                              Row(
+                                children: [
+                                  Text(' ₹ 500',style: TextStyle(color: redtxtclr ),),
+                                  Text(' Incl. of all taxes',style: TxtStyleL,),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    }),
+              ),
+              SizedBox(height: 2.h,),
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 15.0),
+                    child: Text('Most Sold',style: TxtStyleB,),
+                  )),
+              SizedBox(height: 1.h,),
+
+              ///Most Sold
               Container(
                 padding: EdgeInsets.all(12.0),
                 child: GridView.builder(
@@ -186,10 +246,49 @@ class _MedicineHomeState extends State<MedicineHome> {
                         mainAxisSpacing: 4.0
                     ),
                     itemCount: images.length,
+                    shrinkWrap: true,
                     itemBuilder: (BuildContext context, int index){
-                      return Image.network(images[index]);
+                      return InkWell(
+                        onTap: (){
+
+                        },
+                        child: Container(
+                          width: 40.w,
+                          height: 40.h,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                width: 100.w,
+                                height: 15.h,
+                                child: Image.asset('assets/images/tabs.png',fit: BoxFit.fill),
+                              ),
+                              Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text('Medicine Name',style: TxtStyleN,)),
+                              Row(
+                                children: const [
+                                  Text(' lorem ipsuem dolor',style: TextStyle(fontSize: 10),overflow: TextOverflow.fade),
+                                  Text('4.5'),
+                                  Icon(Icons.star_rate,color: Colors.amber,),
+                                ],
+                              ),
+
+                              Row(
+                                children: [
+                                  Text(' ₹ 500',style: TextStyle(color: redtxtclr ),),
+                                  Text(' Incl. of all taxes',style: TxtStyleL,),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
                     }),
               ),
+
+              SizedBox(height: 2  .h,),
             ],
           ),
         ),
