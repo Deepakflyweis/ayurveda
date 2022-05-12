@@ -13,3 +13,6 @@ const cardclr = Color(0xFFBCBCBC);
 const blueclr = Color(0xFF1C6EBA);
 const boxgreenclr = Color(0xFF008000);
 const divclr = Color(0xFFECECEC);
+const memcardclr = Color(0xFF463A92);
+const loyclr = Color(0xFFE5FFE5);
+

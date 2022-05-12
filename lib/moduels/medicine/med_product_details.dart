@@ -1,5 +1,6 @@
 
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:ayurveda/moduels/medicine/buy_medicine.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
@@ -107,7 +108,7 @@ class _MedProductDetailsState extends State<MedProductDetails> {
                     Spacer(),
                     InkWell(
                       onTap: (){
-
+                        Get.to(() => BuyMedicine());
                       },
                       child: Container(
                         width: 20.w,
@@ -237,17 +238,25 @@ class _MedProductDetailsState extends State<MedProductDetails> {
                 ),
                 SizedBox(height: 2.h,),
                 Text('Benefits',style: TxtStyleB),
-                // ListView.builder(
-                //   itemCount: 5,
-                //   itemBuilder : (context, snapshot) {
-                //       return Row(
-                //         children: const [
-                //           Icon(Icons.circle,color: blckclr,),
-                //           AutoSizeText('Lorem ipsum dolor sit amet, consectetur adipiscing elit.  '),
-                //         ],
-                //       );
-                //   },
-                // ),
+                ListView.builder(
+                  itemCount: 5,
+                  shrinkWrap: true,
+                  itemBuilder : (context, snapshot) {
+                      return Padding(
+                        padding: const EdgeInsets.only(left: 3.0,bottom: 3),
+                        child: Row(
+                          children: const [
+                            Icon(Icons.circle,color: blckclr,size: 15),
+                            Expanded(
+                              child: AutoSizeText('Lorem ipsum dolor sit amet, consectetur adipiscing elit.   ',
+                              maxLines: 2,
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                  },
+                ),
                 SizedBox(height: 2.h,),
                 Text('Ingredients',style: TxtStyleB),
                 SizedBox(height: 1.h,),
@@ -259,9 +268,29 @@ class _MedProductDetailsState extends State<MedProductDetails> {
                 style: hintTxtStyle,maxLines: 2,),
                 SizedBox(height: 2.h,),
                 Text('Safety Information',style: TxtStyleB),
-
                 SizedBox(height: 2.h,),
+                ListView.builder(
+                  itemCount: 5,
+                  shrinkWrap: true,
+                  itemBuilder : (context, snapshot) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 3.0,bottom: 3),
+                      child: Row(
+                        children: const [
+                          Icon(Icons.circle,color: blckclr,size: 15),
+                          Expanded(
+                            child: AutoSizeText('Lorem ipsum dolor sit amet, consectetur adipiscing elit.   ',
+                              maxLines: 2,
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+                SizedBox(height: 3.h,),
                 Text('FAQs',style: TxtStyleB),
+                SizedBox(height: 2.h,),
                 AutoSizeText('Q1: Lorem ipsum dolor sit amet, consectetur adipiscing elit? ',
                   style: TxtStyleL,),
 

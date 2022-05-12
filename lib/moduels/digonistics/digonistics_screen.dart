@@ -287,15 +287,19 @@ class _DigonisticsScreenState extends State<DigonisticsScreen> {
                               SizedBox(height: 1.h,),
                               Text(' @₹ 500/-',style: TxtStyleN,),
                               SizedBox(height: 1.h,),
-                              Container(
-                                width: 25.w,
-                                height: 3.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  color: btngreen,
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  width: 25.w,
+                                  height: 3.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    color: btngreen,
+                                  ),
+                                  child: const Text('Book Now',
+                                      style: TextStyle(color: whiteclr,fontWeight: FontWeight.bold)),
                                 ),
-                                child: Text('Book Now',style: TextStyle(color: whiteclr)),
                               ),
                             ],
                           ),

@@ -1,4 +1,5 @@
 
+import 'package:ayurveda/moduels/medicine/placed_sucessfully.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
@@ -57,16 +58,62 @@ class _BuyMedicineState extends State<BuyMedicine> {
                 children: [
                   Icon(Icons.location_on_outlined,color: blckclr,size: 25),
                   SizedBox(width: 2.w,),
-                  Text('Mayur Vihar, New Delhi',style: TxtStyleN),
+                  Text('Apply coupon  ',style: TxtStyleN),
 
                   Spacer(),
-                Icon(Icons.arrow_forward_ios,color: blckclr,size: 20),
-
+                Icon(Icons.arrow_forward_ios,color: blckclr,size: 18),
                 ],
               ),
               SizedBox(height: 2.h,),
               Divider(thickness: 5.0,color: divclr),
               SizedBox(height: 2.h,),
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Bill Details',style: TxtStyleN,)),
+              SizedBox(height: 2.h,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Total Cost',style: hintTxtStyle,),
+                  Text('₹ 500/-',style: TxtStyleN,),
+                ],
+              ),
+              SizedBox(height: 2.h,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Delivery Charge',style: hintTxtStyle,),
+                  Text('₹ 0/-',style: TxtStyleN,),
+                ],
+              ),
+              SizedBox(height: 2.h,),
+              Divider(thickness: 1,color: divclr,),
+              SizedBox(height: 1.h,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Total amount',style: TxtStyleG,),
+                  Text('₹ 500/-',style: TxtStyleG,),
+                ],
+              ),
+              Divider(thickness: 5.0,color: divclr),
+              SizedBox(height: 5.h,),
+              InkWell(
+                onTap: () {
+                  Get.to(() => MedPlacedSucessfully());
+                },
+                child: Container(
+                  width: 35.w,
+                  height: 5.h,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: btngreen,
+                  ),
+                  child: Text('Pay Now',style: TextStyle(color: whiteclr,fontWeight: FontWeight.bold)),
+                ),
+              ),
+
 
             ],
           ),

@@ -1,4 +1,8 @@
 
+import 'package:ayurveda/moduels/digonistics/digonistics_screen.dart';
+import 'package:ayurveda/moduels/medicine/medicine_home.dart';
+import 'package:ayurveda/moduels/medicine/prescription_screen.dart';
+import 'package:ayurveda/moduels/membership/membership_home.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
@@ -46,7 +50,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
               title: Text('Diagnostics Test', style: TxtStyleN),
               trailing: IconButton(
                 onPressed: (){
-
+                  Get.to(() => DigonisticsScreen());
                 },
                 icon: Icon(Icons.arrow_forward_ios,size: 22,color: blckclr),
               ),
@@ -57,18 +61,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
               title: Text('Order Medicine', style: TxtStyleN),
               trailing: IconButton(
                 onPressed: (){
-
-                },
-                icon: Icon(Icons.arrow_forward_ios,size: 22,color: blckclr),
-              ),
-            ),
-
-            ListTile(
-              leading: Image.asset('assets/images/order.png', width: 25,fit: BoxFit.fitWidth),
-              title: Text('Order Medicine', style: TxtStyleN),
-              trailing: IconButton(
-                onPressed: (){
-
+                  Get.to(() => MedicineHome());
                 },
                 icon: Icon(Icons.arrow_forward_ios,size: 22,color: blckclr),
               ),
@@ -91,6 +84,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
               trailing: IconButton(
                 onPressed: (){
 
+                  Get.to(() => PrescriptionScreen());
                 },
                 icon: Icon(Icons.arrow_forward_ios,size: 22,color: blckclr),
               ),
@@ -123,7 +117,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
               title: Text('Membership Card', style: TxtStyleN),
               trailing: IconButton(
                 onPressed: (){
-
+                  Get.to(() => MembershipHome());
                 },
                 icon: Icon(Icons.arrow_forward_ios,size: 22,color: blckclr),
               ),
