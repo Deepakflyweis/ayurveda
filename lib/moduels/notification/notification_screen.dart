@@ -53,7 +53,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
           padding: EdgeInsets.only(left: 15,right: 10),
           child: Column(
             children: [
-              Text('Today',style: TxtStyleN,),
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Today',style: TxtStyleN,)),
               ListView.builder(
                 shrinkWrap: true,
                   itemCount: 10,
