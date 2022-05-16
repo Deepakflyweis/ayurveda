@@ -8,14 +8,14 @@ import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 
-class ProfileMenu extends StatefulWidget {
-  const ProfileMenu({Key? key}) : super(key: key);
+class HomeProfileMenu extends StatefulWidget {
+  const HomeProfileMenu({Key? key}) : super(key: key);
 
   @override
-  State<ProfileMenu> createState() => _ProfileMenuState();
+  State<HomeProfileMenu> createState() => _HomeProfileMenuState();
 }
 
-class _ProfileMenuState extends State<ProfileMenu> {
+class _HomeProfileMenuState extends State<HomeProfileMenu> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -1,5 +1,7 @@
 
 import 'package:ayurveda/moduels/my_order/my_order_index.dart';
+import 'package:ayurveda/moduels/packages/diabetes_checkup_screen.dart';
+import 'package:ayurveda/moduels/profile/profile_home.dart';
 import 'package:ayurveda/moduels/wallet/wallet_screen.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: MyOrderIndex(),
+        home: ProfileScreen(),
       );
     }
     ));
