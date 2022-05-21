@@ -6,7 +6,6 @@ import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
 import 'package:ayurveda/widgets/custom_button.dart';
 import 'package:ayurveda/widgets/otp_input.dart';
-import 'package:flutter/material.dart';
 
 class VerifyOtpScreen extends StatefulWidget {
   const VerifyOtpScreen({Key? key}) : super(key: key);

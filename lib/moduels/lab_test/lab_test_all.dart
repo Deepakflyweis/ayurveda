@@ -1,3 +1,5 @@
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:ayurveda/moduels/lab_test/hospital_details_screen.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/custom_appbar.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
@@ -6,17 +8,14 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class LabTest extends StatefulWidget {
-    LabTest({Key? key}) : super(key: key);
-
-  
+  LabTest({Key? key}) : super(key: key);
 
   @override
   State<LabTest> createState() => _LabTestState();
 }
 
 class _LabTestState extends State<LabTest> {
-
-final _searchLabTest = TextEditingController();
+  final _searchLabTest = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,7 @@ final _searchLabTest = TextEditingController();
       child: Scaffold(
         appBar: CustomAppbar(title: "Consult Specialist"),
         body: SingleChildScrollView(
-            child: Column(
+          child: Column(
           children: [
             SizedBox(
               height: 2.h,
@@ -123,96 +122,122 @@ final _searchLabTest = TextEditingController();
             ),
 
             SizedBox(
-                 width: 90.w,
-                  child: ListView.builder(
-                      physics: BouncingScrollPhysics(),
-                      scrollDirection: Axis.vertical,
-                      shrinkWrap: true,
-                      itemCount: 10,
-                      itemBuilder: (context, index){
-                        return Padding(
-                          padding: const EdgeInsets.only(top: 1.0,bottom: 10),
-                          child: Container(
-                            decoration: BoxDecoration(
+              width: 90.w,
+              child: ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 10, bottom: 10),
+                      child: Container(
+                          decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              border: Border.all(width: 2.5,color: cardclr),
-                            ),
-                            height: 25.h,
-
-                            child:  Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                SizedBox(
-                                 width: 20.w,
-                                 height: 25.h,
-                                 child: Image.asset('assets/images/hosp.png',fit: BoxFit.cover),),
-
-
-                                Column(
+                              color: whiteclr,
+                              // border: Border.all(width: 1,color: cardclr),
+                              boxShadow: const [
+                                BoxShadow(color: Colors.grey, spreadRadius: 2)
+                              ]),
+                              width: 90.w,
+                          height: 20.h,
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                width: 30.w,
+                                height: 25.h,
+                                child: Image.asset('assets/images/hosp.png',
+                                    fit: BoxFit.cover),
+                              ),
+                              SizedBox(
+                                width: 1.w,
+                              ),
+                              SizedBox(
+                                width: 40.w,
+                                child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    SizedBox(height: 1.h,),
-                                    Row( 
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text('Apollo Hospital',style: TxtStyleN,),
-                                        Container(
-                                      height: 3.h,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: btngreen,
-                                      ),
-                                      child: Row(
-                                        children: const [
-                                          Text(' 4.5 '),
-                                          Icon(Icons.star,color: Colors.amber,size:12,),
-                                        ],
-                                      ),
+                                    SizedBox(
+                                      height: 2.h,
                                     ),
-                                    
-                                      ],
+                                    Text(
+                                      'Apollo Hospital',
+                                      style: TxtStyleN,
                                     ),
-                                    
-                                    SizedBox(height: 1.h,),
-                                    Text( "Lorem ipsum dolor sit amet, consectetur adipiscing elit. New Delhi, Pincode -110091",
+                                    SizedBox(
+                                      height: 1.h,
+                                    ),
+                                    AutoSizeText(
+                                      "Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet ",
                                       style: TxtStyleL,
-                                    maxLines: 2,overflow: TextOverflow.ellipsis,
+                                      maxLines: 3,
+                                      overflow: TextOverflow.ellipsis,
                                     ),
-                                   
-                                     
-                                  ],
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    
+                                    SizedBox(
+                                      height: 2.h,
+                                    ),
                                     InkWell(
-                                      onTap: (){
-
+                                      onTap: () {
+                                        Get.to(() => HospitalDetailsScreen());
                                       },
                                       child: Container(
-                                        width: 75,
-                                        height: 25,
+                                        width: 15.w,
+                                        height: 4.h,
                                         alignment: Alignment.center,
                                         decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(5),
-                                          color: redtxtclr,
+                                          borderRadius:
+                                              BorderRadius.circular(5),
+                                          color: blueclr,
                                         ),
-                                        child:  Text(' Add to cart ',style: TextStyle(color: whiteclr)),
+                                        child: Text(' View ',
+                                            style: TextStyle(color: whiteclr)),
                                       ),
                                     ),
                                   ],
-                                )
-                              ],
-                            )
-                          ),
-                        );
-                      }
-                  ),
-                ),
+                                ),
+                              ),
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Container(
+                                    height: 4.h,
+                                    width: 12.w,
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      color: btngreen,
+                                    ),
+                                    child: Row(
+                                      children: const [
+                                        Text('  4.5 '),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.amber,
+                                          size: 12,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 15.w,
+                                    height: 4.h,
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      color: redtxtclr,
+                                    ),
+                                    child: Text(' 6 km  ',
+                                        style: TextStyle(color: whiteclr)),
+                                  ),
+                                ],
+                              )
+                            ],
+                          )),
+                    );
+                  }),
+            ),
           ],
         )),
       ),

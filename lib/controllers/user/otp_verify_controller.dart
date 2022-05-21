@@ -3,7 +3,7 @@
 import 'dart:async';
 
 import 'package:ayurveda/utils/packages_used/essential.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+ 
 
 class VerifyController extends GetxController {
 
