@@ -2,11 +2,9 @@
 
 import 'package:ayurveda/moduels/appointment/completed_screen.dart';
 import 'package:ayurveda/moduels/appointment/upcoming_screen.dart';
-import 'package:ayurveda/moduels/location_module/location_screen.dart';
-import 'package:ayurveda/moduels/notification/notification_screen.dart';
+ 
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
-import 'package:flutter/material.dart';
 
 import '../../utils/app_color.dart';
 
