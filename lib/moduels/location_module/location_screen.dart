@@ -1,5 +1,6 @@
 
 import 'package:ayurveda/utils/app_color.dart';
+import 'package:ayurveda/utils/custom_appbar.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
 import 'package:ayurveda/widgets/textfield.dart';
@@ -24,13 +25,7 @@ class _LocationScreenState extends State<LocationScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: btngreen,
-          leading: IconButton(
-              onPressed: () => Navigator.of(context).pop(),
-              icon: Icon(Icons.arrow_back,size: 25,color: whiteclr,)
-          ),),
+        appBar:  CustomAppbar(title: ""),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(left: 20.0),

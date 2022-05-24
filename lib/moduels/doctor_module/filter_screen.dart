@@ -1,17 +1,7 @@
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
 
-// class FilterScreen   {
-  
-//   static showFilter (){
-
-//     return Dialog();
-
-//   }   
-// }
-
  
-import 'package:flutter/material.dart';
 
 class Filter extends StatefulWidget {
   const Filter({Key? key}) : super(key: key);

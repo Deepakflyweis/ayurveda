@@ -3,7 +3,7 @@ import 'package:ayurveda/moduels/medicine/placed_sucessfully.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
-import 'package:flutter/material.dart';
+ 
 
 class BuyMedicine extends StatefulWidget {
   const BuyMedicine({Key? key}) : super(key: key);

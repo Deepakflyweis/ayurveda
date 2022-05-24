@@ -1,7 +1,8 @@
 
  
-import 'package:ayurveda/moduels/doctor_module/doctor_profile.dart';
-import 'package:ayurveda/moduels/doctor_module/get_appointment.dart';
+import 'package:ayurveda/moduels/digonistics/book_diagnostic/test_name.dart';
+import 'package:ayurveda/moduels/digonistics/digonistics_screen.dart';
+ 
  
 import 'package:ayurveda/utils/packages_used/essential.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: DoctorProfile
+        home: DiagnosticTestName
         (),
       );
     }

@@ -1,3 +1,4 @@
+import 'package:ayurveda/moduels/doctor_module/pay_appointment.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/custom_appbar.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
@@ -112,14 +113,13 @@ class _BookAppointmentState extends State<BookAppointment> {
                           borderRadius: BorderRadius.circular(20),
                         ),
                        label: Text(' 4:00 pm',style: TextStyle(color: btngreen)),
-                  ) 
-              ],
+                        ) 
+                     ],
                     ),                    
                      SizedBox(height: 3.h,),
                     Text("Appointment Type",style: TxtStyleN,),
                      SizedBox(height: 3.h,),
-                    Row(
-                      
+                    Row(                      
                       children: [
                         Chip(
                         elevation: 3,
@@ -138,7 +138,7 @@ class _BookAppointmentState extends State<BookAppointment> {
                               ),
                             label: Text(' Offline',style: TextStyle(color: btngreen)),
                         ),
-                                     ],
+                        ],
                     ),
                     SizedBox(height: 3.h,),
                     GestureDetector(
@@ -160,7 +160,7 @@ class _BookAppointmentState extends State<BookAppointment> {
                     SizedBox(height: 3.h,),
                     InkWell(
                       onTap: () {
-                        // Get.to(() => GetAppointmentScreen());
+                          Get.to(() => PayAppointment());
                       },
                       child: Center(
                         child: Container(
