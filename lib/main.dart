@@ -1,9 +1,7 @@
 
- 
-import 'package:ayurveda/moduels/digonistics/book_diagnostic/test_name.dart';
-import 'package:ayurveda/moduels/digonistics/digonistics_screen.dart';
- 
- 
+import 'package:ayurveda/moduels/services/diseases_we_treat.dart';
+import 'package:ayurveda/moduels/services/threapy.dart';
+import 'package:ayurveda/moduels/timeslot/timeslot_screen.dart'; 
 import 'package:ayurveda/utils/packages_used/essential.dart';
 
 void main() {
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: DiagnosticTestName
+        home: TimeSlotScreen
         (),
       );
     }
