@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:ayurveda/moduels/timeslot/appointment_confirmed_screen.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
@@ -117,6 +118,57 @@ class TimeslotPayScreen extends StatelessWidget {
                   color: blckclr,
                   thickness: 1.0,
                 ),
+                SizedBox(height: 1.h,),
+                Text("About Clinic",style: TxtStyleN,),
+                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu maecenas rhoncus feugiat pellentesque tristique turpis. Diam vitae ac, adipiscing libero imperdiet velit purus bibendum sed. Blandit congue mattis nullam mattis sit libero ut. Nunc quis leo molestie nibh.",
+                style: hintTxtStyle),
+                SizedBox(height: 1.h,),
+                const Divider(
+                  color: blckclr,
+                  thickness: 1.0,
+                ),
+                 SizedBox(height: 1.h,),
+                Text("Hospital Gallery",style: TxtStyleN,),
+                SizedBox(height: 1.h,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image.asset("assets/images/hospg.png",height: 15.h,width: 30.w,fit: BoxFit.fill),
+                    Image.asset("assets/images/hospg.png",height: 15.h,width: 30.w,fit: BoxFit.fill),
+                    Image.asset("assets/images/hospg.png",height: 15.h,width: 30.w,fit: BoxFit.fill),
+                  ],
+                ),
+                SizedBox(height: 2.h,),
+                const Divider(
+                  color: blckclr,
+                  thickness: 1.0,
+                ),
+                SizedBox(
+                  height: 3.h,
+                ),
+                InkWell(
+                  onTap: () {
+                      Get.to(() => AppointmentConfirmedScreen());
+                  },
+                  child: Container(
+                    height: 5.h,
+                    width: 40.w,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: boxgreenclr),
+                    alignment: Alignment.center,
+                    child: const Text("Pay",
+                        style: TextStyle(
+                            color: whiteclr,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20)),
+                  ),
+                ),
+                SizedBox(
+                  height: 3.h,
+                ),
+                
+
               ],
             ),
           ),
