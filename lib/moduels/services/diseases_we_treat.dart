@@ -11,6 +11,7 @@ class DiseasesWeTreat extends StatelessWidget {
       child: Scaffold(
         appBar: CustomAppbar(title: "Disease we treat"),
         body: SingleChildScrollView(
+          padding: EdgeInsets.only(left: 8),
           child: Column(
             children: [
               SizedBox(

@@ -21,6 +21,7 @@ class OtpInput extends StatelessWidget {
       child: Container(
         height: 60,
         width: 60,
+        alignment: Alignment.center,
         decoration:  BoxDecoration(
             border: Border.all(width: 1.0 ,color: blckclr,),
           borderRadius: BorderRadius.circular(5.0),

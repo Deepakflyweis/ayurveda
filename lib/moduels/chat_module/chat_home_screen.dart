@@ -19,7 +19,10 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: CustomAppbar(title: "Chats"),
-        body: ListView.builder(itemBuilder: ((context, index) {
+        body: ListView.builder(
+          itemCount: 15,
+          shrinkWrap: true,                    
+          itemBuilder: ((context, index) {
           return Padding(
             padding: EdgeInsets.all(
               12,
@@ -35,20 +38,21 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
                   decoration: BoxDecoration(
                       color: whiteclr,
                       borderRadius: BorderRadius.circular(6),
-                      border: Border.all(color: hinttxtclr, width: 0.5),
+                      border: Border.all(color: hinttxtclr, width: 0.8),
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
-                          blurRadius: 1,
-                          offset: Offset(1, 1),
+                          blurRadius: 2,
+                          offset: Offset(2, 2),
                         )
                       ]),
                   child: ListTile(
-                    leading: const CircleAvatar(
+                    leading:   CircleAvatar(
                       backgroundColor: btngreen,
                       radius: 40,
-                      backgroundImage: NetworkImage(
+                       child : Image.network(
                         "https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?w=2000",
+                        fit: BoxFit.cover,
                       ),
                     ),
                     title: Text("Dr. Martin", style: TxtStyleN),

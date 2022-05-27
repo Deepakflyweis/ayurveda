@@ -50,7 +50,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           ],
         ),
         body: SingleChildScrollView(
-          padding: EdgeInsets.only(left: 15,right: 10),
+          padding: EdgeInsets.only(left: 15,right: 10,top: 15),
           child: Column(
             children: [
               Align(
@@ -59,12 +59,23 @@ class _NotificationScreenState extends State<NotificationScreen> {
               ListView.builder(
                 shrinkWrap: true,
                   itemCount: 10,
+                  physics: AlwaysScrollableScrollPhysics(),
                   itemBuilder: (context , index){
                     return ListTile(
                       leading: SizedBox(
                           width: 2.w,
                           height: 2.h,
-                          child: Image.asset('src',fit: BoxFit.fill)),
+                          child: Image.network('src',
+                          fit: BoxFit.fill,   
+
+                          errorBuilder: (context, error, stackTrace) =>
+                               const Center(
+                                 child: Icon(Icons.notifications_active_rounded),
+                                 ),
+                          ),
+                          
+                        ),
+
                       title: Text('Chat Notification',style: TxtStyleN),
                       subtitle: AutoSizeText("Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.",
                       style: TxtStyleL, maxLines: 2, overflow: TextOverflow.ellipsis,

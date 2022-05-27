@@ -58,9 +58,10 @@ class _CancelledScreenState extends State<CancelledScreen> {
                           Text('Heart Surgeon -  National Hospital',style: hintTxtStyle,),
                           Expanded(
                             child: Row(
-                              children: const [
+                              children:   [
                                 Icon(Icons.timelapse,color: blckclr,size: 15),
                                 Text('10:00 AM'),
+                                SizedBox(width: 1.w,),
 
                                 Icon(Icons.calendar_today,color: blckclr,size: 15),
                                 Text('12/09/21'),

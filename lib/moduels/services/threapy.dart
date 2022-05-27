@@ -13,6 +13,7 @@ class ThreapyScreen extends StatelessWidget {
         child: Scaffold(
         appBar: CustomAppbar(title: "Therapy"),
         body: SingleChildScrollView(
+          padding: EdgeInsets.only(left: 8),
           child: Column(
             children: [
               SizedBox(

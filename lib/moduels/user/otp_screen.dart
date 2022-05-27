@@ -1,6 +1,6 @@
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ayurveda/controllers/user/otp_verify_controller.dart';
+import 'package:ayurveda/moduels/home_module/nav_bar_index.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
@@ -15,20 +15,23 @@ class VerifyOtpScreen extends StatefulWidget {
 }
 
 class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
-   VerifyController _verifyController = Get.put(VerifyController());
-
+  VerifyController _verifyController = Get.put(VerifyController());
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: whiteclr,
         appBar: AppBar(
           backgroundColor: whiteclr,
           elevation: 0,
           leading: IconButton(
               onPressed: () => Navigator.of(context).pop(),
-              icon: const Icon(Icons.arrow_back_ios,size: 25,color: blckclr,)),
-
+              icon: const Icon(
+                Icons.arrow_back_ios,
+                size: 25,
+                color: blckclr,
+              )),
         ),
         body: Form(
           key: _verifyController.otpkey,
@@ -36,12 +39,14 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
             child: Column(
               children: [
                 SizedBox(height: 4.h),
-                Image.asset('assets/images/otpimg.png',height: 20.h,fit: BoxFit.cover),
-                SizedBox(height: 2.h,),
-
-                AutoSizeText("Enter the OTP code from the phone we just sent you",
-                    style: TxtStyleN ),
-
+                Image.asset('assets/images/otpimg.png',
+                    height: 20.h, fit: BoxFit.cover),
+                SizedBox(
+                  height: 2.h,
+                ),
+                AutoSizeText(
+                    "Enter the OTP code from the phone we just sent you",
+                    style: TxtStyleN),
                 SizedBox(height: 5.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -55,25 +60,23 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                   ],
                 ),
                 SizedBox(height: 3.h),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(" Didn't receive OTP Code ! ",style: hintTxtStyle,),
-                    TextButton(
-                      onPressed: () {
-
-                      },
-                      child: Text('Resend',
-                        style:  TxtStyleN),
+                    Text(
+                      " Didn't receive OTP Code ! ",
+                      style: hintTxtStyle,
                     ),
-
+                    TextButton(
+                      onPressed: () {},
+                      child: Text('Resend', style: TxtStyleN),
+                    ),
                   ],
                 ),
-
                 SizedBox(height: 5.h),
                 CustomButton(
-                  onPressed: (){
+                  onPressed: () {
+                    Get.offAll(() => NavBarIndex(0));
                   },
                   text: 'Submit',
                 )
@@ -84,5 +87,4 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
       ),
     );
   }
-
 }

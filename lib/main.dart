@@ -1,8 +1,5 @@
-
-import 'package:ayurveda/moduels/services/diseases_we_treat.dart';
-import 'package:ayurveda/moduels/services/services_hospital_details.dart';
-import 'package:ayurveda/moduels/services/threapy.dart';
-import 'package:ayurveda/moduels/timeslot/timeslot_screen.dart'; 
+ 
+import 'package:ayurveda/moduels/splash/splash_screen1.dart'; 
 import 'package:ayurveda/utils/packages_used/essential.dart';
 
 void main() {
@@ -21,8 +18,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: ServicesHospitalDetail
-        (),
+        home: SplashScreen(),
       );
     }
     ));

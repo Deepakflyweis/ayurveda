@@ -2,7 +2,8 @@ import 'package:ayurveda/moduels/contact_us/contact_us.dart';
 import 'package:ayurveda/moduels/coupon/coupon_screen.dart';
 import 'package:ayurveda/moduels/f_a_q/faq_screen.dart';
 import 'package:ayurveda/moduels/help_support/help_support.dart';
-import 'package:ayurveda/moduels/profile/edit_profile.dart';
+import 'package:ayurveda/moduels/home_module/profile/edit_profile.dart'; 
+ 
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/custom_appbar.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
@@ -21,8 +22,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppbar(
-          title: 'Profile',
+           appBar:  AppBar(
+          elevation: 5,
+          backgroundColor: btngreen,           
+          title: Text("Profile",style: TxtStyleAW),
+    
         ),
         body: ListView(
           children: [

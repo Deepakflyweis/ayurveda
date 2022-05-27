@@ -17,6 +17,7 @@ class _TreatmentProvideState extends State<TreatmentProvide> {
       child: Scaffold(
         appBar: CustomAppbar(title: "Treatment"),
         body: SingleChildScrollView(
+          padding: EdgeInsets.only(left: 5),
           child: Column(
             children: [
               SizedBox(

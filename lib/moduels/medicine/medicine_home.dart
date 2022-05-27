@@ -1,4 +1,6 @@
 
+import 'package:ayurveda/moduels/medicine/med_product_details.dart';
+import 'package:ayurveda/moduels/medicine/medicine_products.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
@@ -160,7 +162,7 @@ class _MedicineHomeState extends State<MedicineHome> {
                     itemBuilder: (context, index){
                       return GestureDetector(
                           onTap: (){
-
+                            Get.to(() => MedicineProducts());
                           },
                           child: Image.asset(_medList[index],fit: BoxFit.fill,));
                     }),
@@ -180,6 +182,7 @@ class _MedicineHomeState extends State<MedicineHome> {
               Container(
                 padding: EdgeInsets.all(12.0),
                 child: GridView.builder(
+                  physics: ScrollPhysics(),
                     gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         crossAxisSpacing: 6.0,
@@ -190,7 +193,7 @@ class _MedicineHomeState extends State<MedicineHome> {
                     itemBuilder: (BuildContext context, int index){
                       return InkWell(
                         onTap: (){
-
+                          Get.to(() => MedProductDetails());
                         },
                         child: Container(
                           width: 40.w,
@@ -240,6 +243,7 @@ class _MedicineHomeState extends State<MedicineHome> {
               Container(
                 padding: EdgeInsets.all(12.0),
                 child: GridView.builder(
+                  physics: ScrollPhysics(),
                     gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         crossAxisSpacing: 4.0,

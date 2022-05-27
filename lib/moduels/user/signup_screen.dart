@@ -1,10 +1,8 @@
 
-
-
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ayurveda/controllers/user/signup_controller.dart';
 import 'package:ayurveda/moduels/user/login_screen.dart';
+import 'package:ayurveda/moduels/user/personal_info.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
@@ -28,6 +26,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: whiteclr,
         body: SingleChildScrollView(
           child: Form(
             key: _signupController.signUpFormkey,
@@ -35,7 +34,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               padding: const EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  SizedBox(height: 8.h,),
+                  SizedBox(height: 2.h,),
                   Image.asset('assets/images/logo.png',
                     height: 20.h,
                     width: 100.w,
@@ -57,7 +56,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                     decoration: InputDecoration(
                       enabledBorder: const UnderlineInputBorder(
-                         borderSide: BorderSide(color: blckclr, )
+                         borderSide: BorderSide(color: blckclr,width: 0.8 )
                       ),
                         contentPadding: EdgeInsets.all(15),
                         border: InputBorder.none,
@@ -81,7 +80,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                     decoration: InputDecoration(
                       enabledBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(color: blckclr, )
+                          borderSide: BorderSide(color: blckclr,width: 0.8 )
                       ),
                         contentPadding: EdgeInsets.all(15),
                         border: InputBorder.none,
@@ -105,7 +104,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                     decoration: InputDecoration(
                       enabledBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(color: blckclr, )
+                          borderSide: BorderSide(color: blckclr,width: 0.8 )
                       ),
                         contentPadding: EdgeInsets.all(15),
                         border: InputBorder.none,
@@ -129,7 +128,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                     decoration: InputDecoration(
                       enabledBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(color: blckclr, )
+                          borderSide: BorderSide(color: blckclr,width: 0.8 )
                       ),
                         contentPadding: EdgeInsets.all(15),
                         border: InputBorder.none,
@@ -162,7 +161,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                     decoration: InputDecoration(
                       enabledBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(color: blckclr, )
+                          borderSide: BorderSide(color: blckclr,width: 0.8 )
                       ),
                         contentPadding: EdgeInsets.all(15),
                         border: InputBorder.none,
@@ -178,11 +177,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                     ),
                   ),
-                 const Divider(color: blckclr,indent: 10,endIndent: 10),
+                  
                   SizedBox(height: 3.h,),
                   CustomButton(
                     onPressed: (){
-                      // Get.offAll(() => VerifyOtpScreen());
+                       Get.offAll(() => PersonalInfo());
                     },
                     text: 'Create Account',
                   ),
@@ -194,7 +193,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: 7.h,
                     width: 88.w,
                     child: Image.asset('assets/images/gg.png',
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                       height: 6.h,
                       width: 85.w,
                     ),
@@ -212,7 +211,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       Text('Already have an account? ',style: TxtStyleN,),
                       TextButton(
                         onPressed: () {
-                          Get.offAll(() => LoginScreen);
+                          Get.offAll(() => LoginScreen());
                         },
                         child: const Text('Sign In',
                           style: TextStyle(

@@ -58,18 +58,17 @@ class _CompletedScreenState extends State<CompletedScreen> {
                           Text('Doctor name',style: TxtStyleB,),
                           SizedBox(height:  1.h,),
                           Text('Heart Surgeon -  National Hospital',style: hintTxtStyle,),
-                          Expanded(
-                            child: Row(
-                              children: const [
-                                Icon(Icons.timelapse,color: blckclr,size: 15),
-                                Text('10:00 AM'),
+                          Row(
+                            children:   [
+                              Icon(Icons.timelapse,color: blckclr,size: 15),
+                              Text('10:00 AM'),
+                              SizedBox(width: 1.w,),
 
-                                Icon(Icons.calendar_today,color: blckclr,size: 15),
-                                Text('12/09/21'),
+                              Icon(Icons.calendar_today,color: blckclr,size: 15),
+                              Text('12/09/21'),
 
 
-                              ],
-                            ),
+                            ],
                           ),
 
                         ],

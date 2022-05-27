@@ -1,5 +1,5 @@
 
- 
+import 'package:ayurveda/moduels/packages/diabetes_checkup_screen.dart'; 
 import 'package:ayurveda/utils/custom_appbar.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
@@ -11,8 +11,9 @@ class PackageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppbar(title: "Disease we treat"),
+        appBar: CustomAppbar(title: "Packages"),
         body: SingleChildScrollView(
+          padding: EdgeInsets.only(left: 8),
           child: Column(
             children: [
               SizedBox(
@@ -21,7 +22,7 @@ class PackageScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Diseases we treat",
+                  "Packages",
                   style: TxtStyleB,
                 ),
               ),
@@ -40,7 +41,7 @@ class PackageScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return InkWell(
                       onTap: () {
-                        // Get.to(() => HospitalsForTreat());
+                         Get.to(() => DiabetesCheckupScreen());
                       },
                       child: Container(
                         height: 50.h,                        

@@ -58,21 +58,27 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                           Text('Doctor name',style: TxtStyleB,),
                           SizedBox(height:  1.h,),
                           Text('Heart Surgeon -  National Hospital',style: hintTxtStyle,),
-                          Expanded(
-                            child: Row(
-                              children: const [
-                                Icon(Icons.timelapse,color: blckclr,size: 15),
-                                Text('10:00 AM'),
 
-                                Icon(Icons.calendar_today,color: blckclr,size: 15),
-                                Text('12/09/21'),
+                          Row(
+                            children:  [
+                              const Icon(Icons.timelapse,color: blckclr,size: 12),
+                              const Text('10:00 AM',style: TextStyle(
+                                color: hinttxtclr,fontSize: 12, fontWeight: FontWeight.w400
+                              )),
+                              SizedBox(width: 1.w,),                         
 
-                                AutoSizeText('Confirmed',style: TextStyle(
-                                  color: blueclr,fontSize: 14
-                                )),
-                              ],
-                            ),
+                             const Icon(Icons.calendar_today,color: blckclr,size: 12),
+                             const Text('12/09/21',style: TextStyle(
+                                color: hinttxtclr,fontSize: 12, fontWeight: FontWeight.w400
+                              )),
+                              SizedBox(width: 1.w,),
+                              
+                               const AutoSizeText('Confirmed',style: TextStyle(
+                                color: blueclr,fontSize: 14
+                              )),
+                            ],
                           ),
+                          
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [

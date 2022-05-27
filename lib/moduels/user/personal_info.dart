@@ -1,10 +1,11 @@
 
 import 'package:ayurveda/controllers/user/personal_info_controller.dart';
+import 'package:ayurveda/moduels/home_module/nav_bar_index.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
 import 'package:ayurveda/widgets/textfield.dart';
-import 'package:flutter/material.dart';
+ 
 
 class PersonalInfo extends StatefulWidget {
   const PersonalInfo({Key? key}) : super(key: key);
@@ -113,13 +114,13 @@ class _PersonalInfoState extends State<PersonalInfo> {
 
                   InkWell(
                     onTap: (){
-                      // Get.offAll(()=> LoginScreen());
+                      Get.offAll(()=> NavBarIndex(0));
                     },
 
                     child: Center(
                       child: Container(
                         height: 6.h,
-                        width: 45.w,
+                        width: 40.w,
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),

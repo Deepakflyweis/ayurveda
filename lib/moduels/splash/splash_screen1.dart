@@ -2,8 +2,9 @@
 import 'dart:async';
 
 import 'package:ayurveda/moduels/splash/second_splash_screen.dart';
+import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
-import 'package:flutter/material.dart';
+ 
 
 class SplashScreen extends StatefulWidget {
    SplashScreen({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    timer = Timer(Duration(seconds: 5), (){
+    timer = Timer(const Duration(seconds: 5), (){
       Get.offAll(()=> SecondSplashScreen());
     });
     super.initState();
@@ -31,7 +32,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      backgroundColor: whiteclr,
+      body: SafeArea(        
         child: Center(
           child: Image.asset("assets/images/logo.png",
             height: 50.h,),

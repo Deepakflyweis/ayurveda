@@ -12,6 +12,7 @@ class ServicesProvide extends StatelessWidget {
         child: Scaffold(
         appBar: CustomAppbar(title: "Services"),
         body: SingleChildScrollView(
+          padding: EdgeInsets.only(left: 8),
           child: Column(
             children: [
               SizedBox(
@@ -31,6 +32,7 @@ class ServicesProvide extends StatelessWidget {
                 padding: EdgeInsets.all(10),
                 child: GridView.builder(
                   shrinkWrap: true,
+                  physics: ScrollPhysics(),
                   itemCount: 3,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3,

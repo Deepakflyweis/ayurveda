@@ -4,7 +4,7 @@ import 'package:ayurveda/moduels/medicine/buy_medicine.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
-import 'package:flutter/material.dart';
+ 
 
 class MedProductDetails extends StatefulWidget {
   const MedProductDetails({Key? key}) : super(key: key);
@@ -171,7 +171,7 @@ class _MedProductDetailsState extends State<MedProductDetails> {
                         SizedBox(
                           width: 20.w,
                           height: 15.h,
-                          child: Image.asset('assets/images/tabs.png',fit: BoxFit.fill),),
+                          child: Image.asset('assets/images/tabs.png',fit: BoxFit.cover),),
 
 
                         Column(
@@ -241,6 +241,7 @@ class _MedProductDetailsState extends State<MedProductDetails> {
                 ListView.builder(
                   itemCount: 5,
                   shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
                   itemBuilder : (context, snapshot) {
                       return Padding(
                         padding: const EdgeInsets.only(left: 3.0,bottom: 3),
@@ -272,6 +273,7 @@ class _MedProductDetailsState extends State<MedProductDetails> {
                 ListView.builder(
                   itemCount: 5,
                   shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
                   itemBuilder : (context, snapshot) {
                     return Padding(
                       padding: const EdgeInsets.only(left: 3.0,bottom: 3),

@@ -1,7 +1,9 @@
 
 
+import 'package:ayurveda/moduels/appointment/cancelled_screen.dart';
 import 'package:ayurveda/moduels/appointment/completed_screen.dart';
 import 'package:ayurveda/moduels/appointment/upcoming_screen.dart';
+import 'package:ayurveda/utils/custom_appbar.dart';
  
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
@@ -37,21 +39,12 @@ class _AppointmentIndexState extends State<AppointmentIndex> with SingleTickerPr
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          elevation: 5,
-          backgroundColor: btngreen,
-          leading: IconButton(
-              onPressed: () => Navigator.of(context).pop(),
-              icon: Icon(Icons.arrow_back,size: 25,color: whiteclr,)
-          ),
-          title: Text('Appointments',style: TxtStyleAW),
-        ),
-        
+         appBar: CustomAppbar(title: "Appointments"),         
         body: Column(
           children: [
-            SizedBox(height: 1.h,),
+            SizedBox(height: 2.h,),
             TabBar(
-                labelColor: btngreen,
+                labelColor: btngreen,                 
                 unselectedLabelColor: Colors.black,
                 indicatorSize: TabBarIndicatorSize.label,
                 indicatorWeight: 3.0,
@@ -93,7 +86,7 @@ class _AppointmentIndexState extends State<AppointmentIndex> with SingleTickerPr
                 children: const [
                   UpcomingScreen(),
                   CompletedScreen(),
-                  UpcomingScreen(),
+                  CancelledScreen(),
 
                 ],
                 controller: _tabController,

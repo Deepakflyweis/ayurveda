@@ -1,7 +1,7 @@
 
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
-import 'package:flutter/cupertino.dart';
+ 
 
 class PackageDescription extends StatelessWidget {
   const PackageDescription({Key? key}) : super(key: key);

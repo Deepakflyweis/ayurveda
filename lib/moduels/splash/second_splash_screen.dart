@@ -4,7 +4,7 @@ import 'package:ayurveda/moduels/user/login_screen.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
-import 'package:flutter/cupertino.dart';
+ 
 
 class SecondSplashScreen extends StatelessWidget {
   const SecondSplashScreen({Key? key}) : super(key: key);
@@ -13,6 +13,7 @@ class SecondSplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: whiteclr,
         body: Center(
           child: Column(
             children: [
@@ -25,9 +26,14 @@ class SecondSplashScreen extends StatelessWidget {
               SizedBox(height: 2.h,),
              Center(
                child: AutoSizeText(
-                   'Welcome to Shathayu Ayurveda Wellness promoter Since 1901',
-                 style: TxtStyleL,
-                 maxLines: 2,
+                   'Welcome to Shathayu Ayurveda Wellness promoter ',  
+                                  style: TxtStyleL,                 
+               ),
+             ),
+             Center(
+               child: AutoSizeText(
+                   ' Since 1901',
+                 style: TxtStyleL,                  
                ),
              ),
               SizedBox(height: 5.h,),

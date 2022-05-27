@@ -1,13 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:ayurveda/moduels/my_order/medicines_order.dart';
+ 
 import 'package:ayurveda/moduels/packages/package_desc.dart';
 import 'package:ayurveda/moduels/packages/test_requirement.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
 import 'package:ayurveda/utils/text_styles.dart';
-import 'package:flutter/material.dart';
-
-import '../my_order/lab_test_order.dart';
+ 
 
 class PackageDetails extends StatefulWidget {
   const PackageDetails({Key? key}) : super(key: key);
