@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List _mycatList = [
     'assets/images/serv.png',
-    'assets/images/ther.png',
+      'assets/images/ther.png',
     'assets/images/dis.png',
     'assets/images/pack.png',
   ];
@@ -172,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Get.to(() => MedicineHome());
                     },
                     child: Image.asset(
-                      'assets/images/med.png',
+                      'assets/images/med1.png',
                       height: 15.h,
                       fit: BoxFit.fill,
                     ),
@@ -182,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Get.to(() => TreatmentProvide());
                     },
                     child: Image.asset(
-                      'assets/images/treatment.png',
+                      'assets/images/treatment1.png',
                       height: 15.h,
                       fit: BoxFit.fill,
                     ),
@@ -192,7 +192,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Get.to(() => ConsultHome());
                     },
                     child: Image.asset(
-                      'assets/images/cons.png',
+                      'assets/images/cons1.png',
                       height: 15.h,
                       fit: BoxFit.fill,
                     ),
@@ -241,19 +241,19 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            GestureDetector(
-                              onTap: () {
-                                Get.to(() => ThreapyScreen());
-                              },
-                              child: SizedBox(
-                                height: 20.h,
-                                width: 30.w,
-                                child: Image.asset(
-                                  'assets/images/ther.png',
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                            ),
+                            // GestureDetector(
+                            //   onTap: () {
+                            //     Get.to(() => ThreapyScreen());
+                            //   },
+                            //   child: SizedBox(
+                            //     height: 20.h,
+                            //     width: 30.w,
+                            //     child: Image.asset(
+                            //       'assets/images/ther.png',
+                            //       fit: BoxFit.fill,
+                            //     ),
+                            //   ),
+                            // ),
                             GestureDetector(
                               onTap: () {
                                 Get.to(() => DiseasesWeTreat());

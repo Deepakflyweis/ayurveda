@@ -1,7 +1,7 @@
 
 import 'dart:async';
 
-import 'package:ayurveda/moduels/splash/second_splash_screen.dart';
+import 'package:ayurveda/moduels/user/login_screen.dart';
 import 'package:ayurveda/utils/app_color.dart';
 import 'package:ayurveda/utils/packages_used/essential.dart';
  
@@ -18,8 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    timer = Timer(const Duration(seconds: 5), (){
-      Get.offAll(()=> SecondSplashScreen());
+    timer = Timer(const Duration(seconds: 4), (){
+      Get.offAll(()=> LoginScreen());
     });
     super.initState();
   }
@@ -35,8 +35,10 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: whiteclr,
       body: SafeArea(        
         child: Center(
-          child: Image.asset("assets/images/logo.png",
-            height: 50.h,),
+          child: Image.asset("assets/images/logo1.png",
+        
+          fit: BoxFit.cover,
+             ),
         ),
       ),
     );

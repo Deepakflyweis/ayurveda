@@ -20,7 +20,7 @@ class VerifyController extends GetxController {
 
 
   ];
-  late Timer _timer;
+  late final Timer _timer;
   String formatTime(int secs) {
     var minutes = ((secs % 3600) ~/ 60).toString().padLeft(2, '0');
     var seconds = (secs % 60).toString().padLeft(2, '0');
